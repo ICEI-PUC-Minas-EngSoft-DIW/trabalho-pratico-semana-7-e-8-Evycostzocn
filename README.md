@@ -12,20 +12,47 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Evelyn de Paula Costa
+- Matricula: 904838
+- Proposta de projeto escolhida: Site que faz recomendação de filmes, séries, livros e jogos.
+- Breve descrição sobre seu projeto:  Com esse site, quando o usuário selecionar um gênero de seu interesse, aparecerá a recomendação de um filme, um livro, uma série e um jogo que combinam com o gênero escolhido.
 
 ## Print da Home-Page
 
-<<  COLOQUE A IMAGEM AQUI >>
+![Home-Page com JavaScript](/public/img/homepagejs.png)
 
 ## Print da página de detalhes do item
 
-<<  COLOQUE A IMAGEM AQUI >>
+![Detalhes do item](public/img/paginadetalhe3.png)
 
 ## Cole aqui abaixo a estrutura JSON utilizada no app.js
+const destaques = [
+    {
+        tipo: "Jogo",
+        titulo: "The Last of Us Part II",
+        descricao: "Explore um mundo pós-apocalíptico cheio de desafios e emoções",
+        imagem: "img/tlou2.jpeg"
+    },
+    {
+        tipo: "Filme",
+        titulo: "Inception",
+        descricao: "Uma jornada através dos sonhos que desafia a realidade.",
+        imagem: "img/inception.jpg"
+    },
+    {
+        tipo: "Livro",
+        titulo: "1984 de George Orwell",
+        descricao: "Uma distopia clássica que explora temas de vigilância e liberdade.",
+        imagem: "img/1984.jpg"
+    },
+    {
+        tipo: "Série",
+        titulo: "How I Met Your Mother",
+        descricao: "Um pai conta para os filhos como conheceu a mãe deles.",
+        imagem: "img/himym.jpg"
+    }
+]
+
 
 ```javascript
 const dados = [
