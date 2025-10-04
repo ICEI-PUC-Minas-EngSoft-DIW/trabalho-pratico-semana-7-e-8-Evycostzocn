@@ -293,3 +293,44 @@ footer {
 }
 
 /* Menu Mobile - Fim*/
+
+.card-detalhes {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-detalhes img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.card-detalhes h2 {
+    color: #ff4136;
+    margin-bottom: 15px;
+}
+
+.card-detalhes p {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4136;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background-color: #001f3f;
+}

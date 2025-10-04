@@ -25,19 +25,45 @@ const destaques = [
     }
 ];
 
-// container em que os cards serão inseridos
-const container = document.querySelector(".destaques");
 
-container.innerHTML = "<h3>Destaques da Semana</h3>";
+const homeContainer = document.querySelector(".destaques");
+if (homeContainer) {
+    homeContainer.innerHTML = "<h3>Destaques da Semana</h3>";
+    destaques.forEach((item, index) => {
+        const article = document.createElement("article");
 
-destaques.forEach(item => {
-    const article = document.createElement("article");
+        article.innerHTML = `
+        <a href="detalhes.html?id=${index}">
+            <img src="${item.imagem}" alt="${item.tipo}: ${item.titulo}"
+            <h4>${item.tipo}: ${item.titulo}</h4>
+            <p>${item.descricao}</p>
+        </a>
+        `;
 
-    article.innerHTML = `
-    <img src="${item.imagem}" alt="${item.tipo}: ${item.titulo}">
-    <h4>${item.tipo}: ${item.titulo}</h4>
-    <p>${item.descricao}</p>
-    `;
+        homeContainer.appendChild(article);
+    }); 
+}
 
-    container.appendChild(article);
-})
+const detalhesContainer = document.querySelector(".detalhes-item");
+if (detalhesContainer) {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (id !== null && destaques[id]) {
+        const item = destaques[id];
+        detalhesContainer.innerHTML = `
+        <div class="card-detalhes">
+            <h2>${item.tipo}: ${item.titulo}</h2>
+            <img src="${item.imagem}" alt="${item.tipo}: ${item.titulo}">
+            <p>${item.descricao}</p>
+            <a class="btn-voltar" href="index.html">Voltar para a home</a>
+        </div>
+        
+        `;
+    } else {
+        detalhesContainer.innerHTML = "<p>Item não encontrado.</p>"
+    }
+
+}
+
+
+
