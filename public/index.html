@@ -1,13 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+    <header>
+        <div class="logo">
+        <img alt="logo" src="/public/img/logo-diw3.png">
+        <h1>Infinity HUB</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+        <ul class="menu">
+            <li><a href="#">Jogos |</a>
+            <li><a href="#">Filmes |</a></li>
+            <li><a href="#">Livros |</a></li>
+            <li><a href="#">Séries |</a></li>
+            <li><a href="#">Contato |</a></li></li>
+            <li><a href="detalhes.html">Detalhes</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <aside>
+            <h3>Gênero</h3>
+            <ul>
+                <li><a href="#">Ação/Aventura</a></li>
+                <li><a href="#">Suspense</a></li>
+                <li><a href="#">Comédia</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="#">Terror</a></li>
+            </ul>
+
+            <!-- Formulario de newsletter -->
+            <form class="subscribe">
+                <h3>Inscreva-se</h3>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Inscrever</button>
+            </form>
+        </aside>
+
+        <main>
+            <img class="banner" alt="imagemprincipal" src="/public/img/banner.png">
+            <p>Seu portal definitivo para entretenimento!</p>
+            <section class="destaques">
+                <h3>Destaques da Semana</h3>
+                <article>
+                    <img alt="tlou2" src="/public/img/tlou2.jpeg">
+                    <h4>Jogo: The Last of Us Part II</h4>
+                    <p>Explore um mundo pós-apocalíptico cheio de desafios e emoções.</p>
+                </article>
+
+                <article>
+                    <img alt="inception" src="/public/img/inception.jpg">
+                    <h4>Filme: Inception</h4>
+                    <p>Uma jornada através dos sonhos que desafia a realidade.</p>
+                </article>
+
+                <article>
+                    <img alt="1984" src="/public/img/1984.jpg">
+                    <h4>Livro: 1984 de George Orwell</h4>
+                    <p>Uma distopia clássica que explora temas de vigilância e liberdade.</p>
+                </article>
+    
+                <article>
+                    <img alt="himym" src="/public/img/himym.jpg">
+                    <h4>Série: How I Met Your Mother</h4>
+                    <p>Um pai conta para os filhos como conheceu a mãe deles.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Infinity HUB. Todos os direitos reservados.</p>
+    </footer>
+
+
+
+
+    <script src="app.js"></script>
 </body>
 </html>
